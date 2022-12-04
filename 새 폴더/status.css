@@ -1,0 +1,221 @@
+/*메뉴바*/
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #93B2EE;
+    --accent-color: rgb(87, 170, 166)
+}      
+body {
+    margin : 0;
+    font-family: 'Source Sans Pro';
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #93B2EE;
+    padding: 8px 12px;
+    height: 120px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar__menu li {
+    padding: 20px 0px;
+}
+
+.navbar__icons {
+    list-style: none;
+    display :flex;
+    color:white;
+    padding-left: 0px;
+}
+
+.navbar__icons li {
+    /* padding: 8px 12px; */
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navbar__menu li {
+    padding: 8px 13px;
+}
+
+.navbar__menu li:hover {
+    background-color : white (87, 170, 166);
+    border-radius: 5px;
+}
+
+.navbar__icons li {
+    padding : 10px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+}
+
+
+div{
+    font-size: 30px;
+    text-align: center;
+/*이미지+설명*/
+}#main-1{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+#main-1 #img{
+    min-height: 100px;
+}
+#main-1 #footer{
+    margin-top: 10px;
+    min-height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    border: 3.5px solid #93B2EE;
+}
+#footer #p-1{
+    font-weight: bold;
+}
+/*본문 */
+#main-1 #container{
+    background-color: white;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 3fr;
+}
+#main #contents {
+    min-height: 400px;
+    background-color: #D3DEF4;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+#main #p-2{
+    font-weight: bold;
+}
+#main #container-1{
+    background-color: white;
+    border-radius: 10px;
+    min-height: 240px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width:1000px){  /*가로 너비가 600px 이하 일때 아래 스타일 적용*/
+    #main-1{
+        display: block;
+        margin: 20px;
+    }
+    #main-1 #img{
+        min-height: 100px;
+    }
+    #main-1 #footer{
+        margin-bottom: 10px;
+        
+    }
+    #main{
+        display: block;  /*아래로 내려 오기*/
+        margin: 20px;
+    }
+    #main #contents{
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+    #main #sidebar{
+        min-height: 350px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding : 10px 24px;
+    }
+    
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__icons{
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar__toggleBtn {
+        display: block;
+        position: absolute;
+        right : 20px;
+        font-size: 24px;
+        color :white (87, 170, 166);
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+        transition: 1s ease-out;
+    }
+
+
+
+    #main-1{
+        display: block;
+        margin: 20px;
+        font-size: 10px;
+    }
+    #main-1 #img{
+        min-height: 50px;
+    }
+    #main-1 #footer{
+        margin-bottom: 10px;
+    }
+    #p-1{
+        font-size: 25px;
+    }
+    #p{
+        font-size: 20px;
+    }
+    #main{
+        display: block;  /*아래로 내려 오기*/
+        margin: 20px;
+    }
+    #main #contents{
+        margin-bottom: 20px;
+        margin-right: 0px;
+        min-height: 300px;
+    }
+    #main #container-1{
+        min-height: 200px;
+    }
+    
+}
